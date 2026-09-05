@@ -30,7 +30,7 @@ The most informative comparison uses four predictors and stratified five fold cr
 | --- | ---: | ---: | ---: |
 | Linear probability model | 81.0% | 73.3% | 74.4% |
 | Logistic regression | 70.0% | 77.6% | 76.3% |
-| Thresholded linear model | 60.6% | 72.1% | 69.8% |
+| Segmented linear regression | 60.6% | 72.1% | 69.8% |
 | Classification tree | 2.0% | 97.2% | 79.2% |
 | Random forest | 11.4% | 92.5% | 77.0% |
 
