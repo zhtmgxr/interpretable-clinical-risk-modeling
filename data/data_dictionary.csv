@@ -1,0 +1,26 @@
+variable,type,required,encoding,role
+patient_id,character,yes,anonymous identifier,identifier
+mortality,integer,yes,0 survived and 1 died,outcome
+amputation_status,integer,no,0 no amputation and 1 amputation,outcome
+amputation_type,factor,no,no_amputation or digit_ray or higher_level,outcome
+age,numeric,no,years,covariate
+extent,factor,no,below_wrist or wrist_to_elbow or above_elbow,covariate
+organism,factor,no,culture organism category,covariate
+blood_culture,integer,no,0 negative and 1 positive,covariate
+diabetes,integer,no,0 absent and 1 present,covariate
+ckd,integer,no,0 absent and 1 present,covariate
+cad,integer,no,0 absent and 1 present,covariate
+smoker,integer,no,0 no and 1 yes,covariate
+special_medication,factor,no,medication category or none,covariate
+shock,integer,no,0 absent and 1 present,covariate
+fever_38,integer,no,0 below 38 C and 1 at least 38 C,covariate
+wcc,numeric,no,white cell count,covariate
+hemoglobin,numeric,no,hemoglobin,covariate
+platelet_count,numeric,no,platelet count,covariate
+inr,numeric,no,international normalized ratio,covariate
+crp,numeric,no,C reactive protein,covariate
+abnormal_liver_function,integer,no,0 absent and 1 present,covariate
+albumin,numeric,no,albumin,covariate
+creatinine,numeric,no,creatinine,covariate
+glucose,numeric,no,glucose,covariate
+ph,numeric,no,blood pH,covariate

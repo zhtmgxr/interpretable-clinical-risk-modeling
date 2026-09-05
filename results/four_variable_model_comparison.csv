@@ -1,0 +1,9 @@
+model,in_sample_sensitivity,in_sample_specificity,in_sample_accuracy,cv_sensitivity,cv_specificity,cv_accuracy
+linear_probability,87.5,85.3,85.7,81.0,73.3,74.4
+thresholded_linear,87.5,82.4,83.3,60.6,72.1,69.8
+logistic_regression,87.5,85.3,85.7,70.0,77.6,76.3
+generalized_additive,87.5,82.4,83.3,30.4,77.5,68.6
+classification_tree,0.0,100.0,81.0,2.0,97.2,79.2
+random_forest,100.0,100.0,100.0,11.4,92.5,77.0
+support_vector_machine,87.5,88.2,88.1,50.0,58.7,57.1
+artificial_neural_network,100.0,76.5,81.0,60.6,70.7,68.6
