@@ -2,23 +2,22 @@
 
 [![R tests](https://github.com/zhtmgxr/interpretable-clinical-risk-modeling/actions/workflows/tests.yml/badge.svg)](https://github.com/zhtmgxr/interpretable-clinical-risk-modeling/actions/workflows/tests.yml)
 
-An R implementation of interpretable risk modeling for small clinical cohorts, developed around a twenty year retrospective study of upper limb necrotizing fasciitis.
+An R implementation of interpretable clinical risk modeling, developed around a twenty year retrospective study of upper limb necrotizing fasciitis.
 
 ## Research question
 
-Rare disease modeling creates a difficult statistical regime. The cohort is too small for flexible models to learn stable decision boundaries, the positive outcome is uncommon, and clinicians need a decision rule they can inspect under time pressure.
+Clinical risk modeling becomes difficult when flexible models learn unstable decision boundaries, outcomes are imbalanced, and clinicians need a decision rule they can inspect under time pressure.
 
 This project asks a practical question: how can a model preserve enough structure to detect mortality risk while remaining simple enough to audit and calculate?
 
-The analysis combines classical regression, threshold based modeling, repeated stratified validation, and an additive scorecard. Its main lesson is that overall accuracy is not sufficient when the outcome is imbalanced. A model can appear accurate while failing almost every patient in the clinically important minority class.
+The analysis combines classical regression, threshold based modeling, repeated stratified validation, and an additive scorecard. Its main lesson is that overall accuracy is not sufficient when the outcome is imbalanced. A model can appear accurate while failing almost every mortality case.
 
 ## Study setting
 
-1. Forty two consecutive patients collected over twenty years
-2. Thirty four survivors and eight deaths
-3. Mortality, amputation status, and amputation type as outcomes
-4. Demographic, comorbidity, infection, presentation, and laboratory covariates
-5. R 4.4.1 for the statistical analysis
+1. A retrospective study spanning twenty years
+2. Mortality, amputation status, and amputation type as outcomes
+3. Demographic, comorbidity, infection, presentation, and laboratory covariates
+4. R 4.4.1 for the statistical analysis
 
 Patient level records are not included. The repository contains a data contract, analysis functions, aggregate findings, and synthetic fixtures for testing.
 
@@ -100,6 +99,6 @@ The code preserves both the continuous cutoff and the integer implementation so 
 
 ## Statistical limitations
 
-The cohort contains only eight deaths. Every estimate therefore has substantial uncertainty, and model selection can amplify that uncertainty. P values and confidence intervals obtained after AIC selection should not be interpreted as if the model had been fixed in advance. Repeated cross validation measures split sensitivity, but it does not replace external validation on an independent hospital cohort.
+Model selection and repeated use of one retrospective dataset can amplify estimation uncertainty. P values and confidence intervals obtained after AIC selection should not be interpreted as if the model had been fixed in advance. Repeated cross validation measures split sensitivity, but it does not replace external validation on an independent hospital dataset.
 
 This repository is a research implementation. It is not a validated medical device and must not be used to make clinical decisions.
